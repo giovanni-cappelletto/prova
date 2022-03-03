@@ -47,7 +47,7 @@ header {
 main {
     display: grid;
     grid-template-rows: repeat(2, 245px);
-    margin-block-start: 90px;
+    margin-block-start: 60px;
 }
 
 .container {
