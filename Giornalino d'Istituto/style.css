@@ -1,233 +1,232 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
-    box-sizing: border-box; 
-    margin: 0; 
-    padding: 0; 
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 
 :root {
-    --red: hsl(1, 65%, 34%);
-    --blue: hsl(225, 33%, 24%);
-    --light-blue: hsl(0, 0%, 82%);
-    --white: hsl(0, 0%, 100%);
+--red: hsl(1, 65%, 34%);
+--blue: hsl(225, 33%, 24%);
+--light-blue: hsl(0, 0%, 82%);
+--white: hsl(0, 0%, 100%);
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+font-family: 'Poppins', sans-serif;
+overflow-x: hidden;
 }
 
 /* Header */
 header {
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column; 
-    padding-block: 25px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+padding-block: 25px;
 }
 
 .text-logo {
-    text-align: center;
-    color: var(--blue);
-    font-size: clamp(1.3rem, 5vw, 2rem);
-    order: 2;
+text-align: center;
+color: var(--blue);
+font-size: clamp(1.3rem, 5vw, 2rem);
+order: 2;
 }
 
 .image-logo {
-    text-align: center;
-    margin-block-end: 20px;
-    order: 1;
+text-align: center;
+margin-block-end: 20px;
+order: 1;
 }
 
 .logo {
-    max-inline-size: 70%;
-    block-size: auto;
+max-inline-size: 70%;
+block-size: auto;
 }
 
 /* Main */
 main {
-    position: relative;
-    height: 100vh;
+display: grid;
+grid-template-rows: 160px 1fr;
+margin-block-start: 60px;
 }
 
 .container {
-    margin: 70px 35px;
-    inline-size: clamp(70%, 2vw, 100%);
+margin-inline: 35px;
+inline-size: clamp(70%, 2vw, 100%);
 }
 
 .title {
-    position: relative;
-    color: var(--blue);
-    font-size: clamp(1.8rem, 5vw, 2.4rem);
+position: relative;
+color: var(--blue);
+font-size: clamp(1.8rem, 5vw, 2.4rem);
 }
 
 .title::after {
-    content: ''; 
-    background: var(--red); 
-    position: absolute; 
-    bottom: -10px; 
-    left: 0; 
-    inline-size: 40px; 
-    block-size: 4px; 
-    border-radius: 5px;
+content: '';
+background: var(--red);
+position: absolute;
+bottom: -10px;
+left: 0;
+inline-size: 40px;
+block-size: 4px;
+border-radius: 5px;
 }
 
 .paragraph {
-    color: var(--blue);
-    margin-block-start: 30px;
-    font-weight: 400;
+color: var(--blue);
+margin-block-start: 30px;
+font-weight: 400;
 }
 
 .btn-active:active > .btn,
 .btn-active:hover > .btn {
-    box-shadow: none;
+box-shadow: none;
 }
 
 .btn {
-    background: var(--red);
-    color: var(--white);
-    cursor: pointer;
-    outline: none;
-    border: none;
-    margin-block-start: 40px;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    font-weight: 900;
-    box-shadow: 3px 5px 0 hsl(0, 0%, 0%, 30%), 3px 5px 0 hsl(0, 100%, 60%), 8px 7px 0 2px hsl(0, 0%, 0%, 24%);
-    transition: all .5s ease;
+background: var(--red);
+color: var(--white);
+cursor: pointer;
+outline: none;
+border: none;
+margin-block-start: 40px;
+padding: 10px 20px;
+font-size: 1.1rem;
+font-weight: 900;
+box-shadow: 3px 5px 0 hsl(0, 0%, 0%, 30%), 3px 5px 0 hsl(0, 100%, 60%), 8px 7px 0 2px hsl(0, 0%, 0%, 24%);
+transition: all .5s ease;
 }
 
 .social {
-    margin-block-start: 50px;
+margin-block-start: 50px;
 }
 
 a {
-    text-decoration: none;
+text-decoration: none;
 }
 
 .icon {
-    cursor: pointer;
-    margin-inline: 0 35px;
+cursor: pointer;
+margin-inline: 0 35px;
 }
 
 .fa-instagram {
-    background: radial-gradient(circle at 30% 107%, hsl(55, 96%, 79%) 0%, hsl(55, 96%, 79%) 5%, hsl(5, 98%, 64%) 45%, hsl(319, 71%, 49%) 60%, hsl(225, 83%, 54%) 90%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+background: radial-gradient(circle at 30% 107%, hsl(55, 96%, 79%) 0%, hsl(55, 96%, 79%) 5%, hsl(5, 98%, 64%) 45%, hsl(319, 71%, 49%) 60%, hsl(225, 83%, 54%) 90%);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .fa-github {
-    color: hsl(0, 0%, 0%);
+color: hsl(0, 0%, 0%);
 }
 
 .background-image {
-    position: absolute; 
-    bottom: 0;
-    right: 0;
-    max-inline-size: 80%;
-    z-index: -2;
+justify-self: end;
+max-inline-size: 80%;
+z-index: -2;
 }
 
 /* Section */
 section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 80px 35px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin: 80px 35px;
 }
 
 .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-    margin-block-start: 50px;
-    padding: 40px;
-    inline-size: 100%; 
-    block-size: auto;
-    box-shadow: 0px 0px 20px 1px hsla(0, 0%, 0%, 0.226);
+display: flex;
+justify-content: space-between;
+align-items: start;
+flex-direction: column;
+margin-block-start: 50px;
+padding: 40px;
+inline-size: 100%;
+block-size: auto;
+box-shadow: 0px 0px 20px 1px hsla(0, 0%, 0%, 0.226);
 }
 
 .preview {
-    max-inline-size: 80%;
+max-inline-size: 80%;
 }
 
 .page-number {
-    margin-block-start: 30px;
+margin-block-start: 30px;
 }
 
 .arguments {
-    margin-block-start: 12px;
+margin-block-start: 12px;
 }
 
 .preview,
 .arrow-container {
-    margin-block-start: 40px;
+margin-block-start: 40px;
 }
 
 .arrow-container > * {
-    cursor: pointer;
-    margin-inline-end: 20px;
-    max-inline-size: 20%;
+cursor: pointer;
+margin-inline-end: 20px;
+max-inline-size: 20%;
 }
 
 .dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-block-start: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-block-start: 30px;
 }
 
 .dots span {
-    cursor: pointer;
-    background: var(--light-blue);
-    inline-size: 25px; 
-    block-size: 25px; 
-    border-radius: 50%;
-    margin-inline: 10px;
-    transition: 150ms ease-in;
+cursor: pointer;
+background: var(--light-blue);
+inline-size: 25px;
+block-size: 25px;
+border-radius: 50%;
+margin-inline: 10px;
+transition: 150ms ease-in;
 }
 
 .dots span:hover,
 .dots span:focus,
 .dots span:active {
-    background: var(--blue);
+background: var(--blue);
 }
 
 @media screen and (min-width: 950px) {
-    header {
-        flex-direction: row;
-        padding-inline: 80px;
-    }
+header {
+flex-direction: row;
+padding-inline: 80px;
+}
 
-    .text-logo {
-        order: 1; 
-    }
+.text-logo {
+order: 1;
+}
 
-    .image-logo {
-        order: 2;
-        margin: 0;
-    }
+.image-logo {
+order: 2;
+margin: 0;
+}
 
-    .container, 
-    section {
-        padding-inline: 40px;
-    }
+.container,
+section {
+padding-inline: 40px;
+}
 
-    .background-image {
-        max-inline-size: 50%;
-    }
+.background-image {
+max-inline-size: 50%;
+}
 
-    .wrapper {
-        flex-direction: row;
-        inline-size: 80%;
-    }
+.wrapper {
+flex-direction: row;
+inline-size: 80%;
+}
 
-    .preview {
-        margin: 0; 
-        max-inline-size: 40%;
-    }
+.preview {
+margin: 0;
+max-inline-size: 40%;
+}
 }
