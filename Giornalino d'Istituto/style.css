@@ -173,7 +173,6 @@ section {
 .arrow-container > * {
     cursor: pointer;
     user-select: none;
-    margin-inline-end: 20px;
     max-inline-size: 20%;
 }
 
