@@ -25,6 +25,7 @@ main {
     background-position: bottom right;
     background-size: 70%;
     height: 100vh;
+    border: 2px solid red; 
 }
 
 header {
@@ -32,7 +33,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    /* padding-block: 25px; */
+    padding-block: 25px;
 }
 
 .text-logo {
@@ -56,7 +57,7 @@ header {
 .container {
     inline-size: clamp(70%, 2vw, 100%);
     margin-inline: 35px;
-    /* margin-block-start: 40px; */
+    margin-block-start: 40px;
 }
 
 .title {
