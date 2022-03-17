@@ -56,7 +56,7 @@ header {
 .container {
     inline-size: clamp(70%, 2vw, 100%);
     margin-inline: 35px;
-    margin-block-start: 40px;
+    /* margin-block-start: 40px; */
 }
 
 .title {
