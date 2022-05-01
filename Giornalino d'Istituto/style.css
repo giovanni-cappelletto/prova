@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --red: hsl(1, 65%, 34%);
+    --blue: hsl(225, 33%, 24%);
+    --black: hsl(0, 0%, 0%);
+    --light-blue: hsl(0, 0%, 82%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Landing Page */
+main {
+    background-image: url('./images/background.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 70%;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 25px;
+}
+
+.text-logo {
+    text-align: center;
+    color: var(--blue);
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    order: 2;
+}
+
+.image-logo {
+    text-align: center;
+    margin-block-end: 20px;
+    order: 1;
+}
+
+.logo {
+    max-inline-size: 70%;
+    block-size: auto; 
+}
+
+.container {
+    inline-size: clamp(70%, 2vw, 100%);
+    margin-inline: 35px;
+    margin-block-start: 40px;
+}
+
+.title {
+    position: relative;
+    color: var(--blue);
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+}
+
+.title::after {
+    content: '';
+    background: var(--red);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    inline-size: 40px;
+    block-size: 4px;
+    border-radius: 5px;
+}
+
+.paragraph {
+    color: var(--blue);
+    margin-block-start: 30px;
+    font-weight: 400;
+}
+
+.btn-active:active > .btn,
+.btn-active:hover > .btn {
+    box-shadow: none;
+}
+
+.btn {
+    background: var(--red);
+    color: var(--white);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-block-start: 40px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    box-shadow: 3px 5px 0 hsl(0, 0%, 0%, 30%), 3px 5px 0 hsl(0, 100%, 60%), 8px 7px 0 2px hsl(0, 0%, 0%, 24%);
+    transition: all .5s ease;
+}
+
+.social {
+    margin-block-start: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon {
+    cursor: pointer;
+    margin-inline: 0 35px;
+}
+
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, hsl(55, 96%, 79%) 0%, hsl(55, 96%, 79%) 5%, hsl(5, 98%, 64%) 45%, hsl(319, 71%, 49%) 60%, hsl(225, 83%, 54%) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-github {
+    color: var(--black);
+}
+
+/* Section */
+section {
+    margin-block-start: 2rem;
+}
+
+section .title {
+    text-align: center;
+}
+
+section .title::after {
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+section .paragraph {
+    text-align: center;
+}
+
+.main-gallery {
+    outline: none; 
+    position: relative;
+    margin-block: 2.5rem; 
+}
+
+.gallery-cell {
+    text-decoration: none;
+    text-align: center;
+    width: min-content;
+    height: 400px;
+    width: 100%;
+    width: 100%;
+}
+
+.gallery-cell img {
+    height: 100%;
+}
+
+.flickity-button {
+    all: unset;
+    fill: var(--white);
+    background-color: var(--black);
+    display: flex;  
+    cursor: pointer;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    padding: 10px;
+    opacity: 0; 
+    transition: opacity .25s linear;
+}
+
+.previous {
+    left: 20px; 
+}
+
+.next {
+    right: 20px; 
+}
+
+.flickity-viewport:hover ~ .flickity-button {
+    pointer-events: all;
+    opacity: 1; 
+}
+
+.flickity-page-dots {
+    list-style-type: none;
+    display: flex; 
+    justify-content: center;
+    margin-block-start: 30px;
+    margin-inline: 20px;
+}
+
+.dot {
+    background-color: var(--black);
+    cursor: pointer;
+    position: relative;
+    transform: scale(1, 1);
+    width: 50%; 
+    height: 4px;
+    opacity: .5;
+    transition: all .25s linear;
+}
+
+
+.dot:hover {
+    opacity: 1;
+    transform: scale(1, 1.5);
+}
+
+.dot[aria-current="step"] {
+    opacity: 1;
+}
+
+@media screen and (min-width: 950px) {
+    main {
+        background-size: 40%;
+    }
+    
+    header {
+        flex-direction: row;
+        padding-inline: 80px;
+    }
+
+    .text-logo {
+        order: 1;
+    }
+
+    .image-logo {
+        order: 2;
+        margin: 0;
+    }
+
+    .container {
+        padding-inline: 40px;
+    }
+
+    .gallery-cell {
+        width: 70%;
+    }
+
+    .gallery-cell img {
+        width: 30%;
+    }
+}
